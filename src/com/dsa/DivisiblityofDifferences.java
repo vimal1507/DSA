@@ -1,26 +1,45 @@
 package com.dsa;
 
-public class DivisiblityofDifferences {
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
 
-	public static void main(String[] args) {
-		int n = 3;
-		int k = 2;
-		int m = 3;
-		int[] arr = {1,8,4};
-		int count = 0;
-		int[] temp = new int[m];
-		for(int i=0;i<arr.length;i++) {
-			temp[arr[i]%2]++;
+public class DivisiblityofDifferences {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
+
+		int n = Integer.parseInt(st.nextToken());
+		int k = Integer.parseInt(st.nextToken());
+		int m = Integer.parseInt(st.nextToken());
+
+		int[] arr = new int[n];
+
+		st = new StringTokenizer(br.readLine());
+		for (int i = 0; i < n; i++) {
+			arr[i] = Integer.parseInt(st.nextToken());
 		}
 
-		for(int i=0;i<temp.length;i++) {
-			if(temp[i]==k) {
-				System.out.println("yes");
+		ArrayList<Integer>[] temp = new ArrayList[m + 1];
+		ArrayList<Integer> al = new ArrayList<>();
+		for (int i = 0; i <= m; i++) {
+			temp[i] = new ArrayList<>();
+		}
+		for (int i = 0; i < n; i++) {
+			int re = arr[i] % m;
+			temp[re].add(arr[i]);
+		}
+		for (int i = 0; i < temp.length; i++) {
+			if (temp[i].size() >= k) {
+				System.out.println("Yes");
+				for (int j = 0; j < k; j++) {
+					System.out.print(temp[i].get(j) + " ");
+				}
 				return;
 			}
 		}
-		
-		System.out.println("no");
+		System.out.println("No");
 	}
-
 }
