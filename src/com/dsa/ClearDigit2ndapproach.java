@@ -1,11 +1,9 @@
 package com.dsa;
 
-import java.util.Arrays;
-
-public class ClearDigit {
+public class ClearDigit2ndapproach {
 
 	public static void main(String[] args) {
-		System.out.println(clearDigits("li5i56"));
+		System.out.println(clearDigits("iuyuttli56"));
 
 	}
 
@@ -22,4 +20,5 @@ public class ClearDigit {
 		}
 		return sb.toString();
 	}
+
 }
