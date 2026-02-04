@@ -30,11 +30,7 @@ public class BackSpaceStringCompare {
 			}
 		}
 
-		if (sbs.toString().equals(sbt.toString())) {
-			return true;
-		} else {
-			return false;
-		}
+		return sbs.toString().equals(sbt.toString());
 
 	}
 
