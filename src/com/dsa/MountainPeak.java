@@ -1,6 +1,7 @@
 package com.dsa;
 
 import java.util.Arrays;
+import java.util.Stack;
 
 public class MountainPeak {
 
@@ -11,21 +12,26 @@ public class MountainPeak {
 
 	}
 	
-	 public static int[] nextHigherPeak(int[] heights) {
-		 	int[] res = new int[heights.length];
-		 	for(int i=0;i<res.length;i++) {
-		 		res[i] = -1;
-		 	}
-		 		for(int i=0;i<heights.length;i++) {
-		 			int j= 0;
-		 			for(j=i+1;j<heights.length;j++) {
-		 				if(heights[i] < heights[j]) {
-		 					res[i] = heights[j];
-		 					break;
-		 				}
-		 			}	 			
-		 		}
-	        return res;
+	public static int[] nextHigherPeak(int[] heights) {
+		 Stack<Integer> s = new Stack<>();
+		 int n = heights.length;
+		 int[] res = new int[n];
+		 
+		 for(int i = n-1;i>=0;i--){
+		     while(!s.isEmpty() && s.peek() <= heights[i]){
+		         s.pop();
+		     }
+		     
+		     if(s.isEmpty()){
+		         res[i] = -1;
+		     }else{
+		         res[i] = s.peek();
+		     }
+		     
+		     s.push(heights[i]);
+		 }
+		 
+		 return res;
 	    }
 
 }
