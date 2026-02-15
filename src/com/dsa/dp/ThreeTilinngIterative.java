@@ -3,7 +3,7 @@ package com.dsa.dp;
 public class ThreeTilinngIterative {
 
 	public static void main(String[] args) {
-		int n = 12;
+		int n = 5;
 		int[] arr = new int[n+1];
 		if(n%2 != 0) {
 			System.out.println(0);
