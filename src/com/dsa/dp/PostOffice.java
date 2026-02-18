@@ -29,17 +29,19 @@ public class PostOffice {
 	}
 	
 	static int minDistance(int[] v,int p, int pos, int[][] dp,int[][] count) {
+		
+			if(pos >= v.length)
+				return 0;
+			
 	        if(dp[pos][p] != -1)
 	            return dp[pos][p];
 	        if(p == 1)
 	            return dp[pos][p]=count[pos][v.length-1];
 
-	        if(pos >= v.length)
-	            return 0;
 
 	        int min = Integer.MAX_VALUE;
 
-	            for (int i = pos; i <= v.length-p; i++) {
+	            for (int i = pos; i < v.length; i++) {
 	                min = Math.min(minDistance(v, p - 1, i + 1,dp,count) + count[pos][i], min);
 	            }
 	        return dp[pos][p] = min;
