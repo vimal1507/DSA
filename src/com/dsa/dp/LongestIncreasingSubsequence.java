@@ -18,7 +18,7 @@ public class LongestIncreasingSubsequence {
         return lis(nums,-1,0,dp);
     }
 
-    private static int lis(int[] nums, int pre, int cur, int[][] dp){
+    private static int lis(int[] nums, int p, int cur, int[][] dp){
         if(cur == nums.length)
         return 0;
         if(dp[pre+1][cur] != -1)
@@ -35,3 +35,5 @@ public class LongestIncreasingSubsequence {
     }
 
 }
+
+
