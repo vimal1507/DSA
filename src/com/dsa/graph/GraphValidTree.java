@@ -23,11 +23,12 @@ public class GraphValidTree {
 	        for(int i =0; i<n;i++){
 	            graph.add(new ArrayList<>());
 	        }
+	        // make graph
 	        for(int[] e :edges){
 	            graph.get(e[0]).add(e[1]);
 	            graph.get(e[1]).add(e[0]);
 	        }
-
+	        // bfs
 	        Queue<Integer> q = new LinkedList<>();
 	        boolean[] visited = new boolean[n];
 	        q.offer(0);
