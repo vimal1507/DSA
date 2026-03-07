@@ -61,14 +61,14 @@ public class KnightJourney {
 	        }
 
 	       
-	        dfs(grid,r-2,c-1,count+1,path);
-	        dfs(grid,r-2,c+1,count+1,path);
-	        dfs(grid,r-1,c-2,count+1,path);
-	        dfs(grid,r-1,c+2,count+1,path);
-	        dfs(grid,r+1,c-2,count+1,path);
-	        dfs(grid,r+1,c+2,count+1,path);
-	        dfs(grid,r+2,c-1,count+1,path);
-	        dfs(grid,r+2,c+1,count+1,path);
+	        dfs(grid, r - 1, c - 2, count + 1, path); // Move 1: c-2, r-1
+            dfs(grid, r + 1, c - 2, count + 1, path); // Move 2: c-2, r+1
+            dfs(grid, r - 2, c - 1, count + 1, path); // Move 3: c-1, r-2
+            dfs(grid, r + 2, c - 1, count + 1, path); // Move 4: c-1, r+2
+            dfs(grid, r - 2, c + 1, count + 1, path); // Move 5: c+1, r-2
+            dfs(grid, r + 2, c + 1, count + 1, path); // Move 6: c+1, r+2
+            dfs(grid, r - 1, c + 2, count + 1, path); // Move 7: c+2, r-1
+            dfs(grid, r + 1, c + 2, count + 1, path); // Move 8: c+2, r+1
 
 	      
 	        if(!found){
