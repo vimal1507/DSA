@@ -1,6 +1,4 @@
-package com.contest.string;
-
-import java.util.Arrays;
+package com.dsa.String;
 
 public class AddString {
 
