@@ -12,7 +12,7 @@ public class RightMax {
 	}
 
 	public static void solve() {
-		int[] arr = { 2, 1, 2, 3, 1 };
+		int[] arr = { 6,6,6,1,7,6};
 		int[] copy = new int[arr.length];
 		for (int i = 0; i < arr.length; i++) {
 			copy[i] = arr[i];
