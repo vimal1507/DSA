@@ -1,4 +1,4 @@
-package com.contest.binarysearch;
+package com.dsa.binarysearch;
 
 public class SuperPow {
 
