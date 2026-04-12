@@ -102,9 +102,9 @@ public class GoStright {
         }
 
         if (endR == -1) {
-            out.println("No");
+            System.out.println("No");
         } else {
-            out.println("Yes");
+            System.out.println("Yes");
             StringBuilder path = new StringBuilder();
             int currR = endR, currC = endC, currD = endD;
 
