@@ -64,7 +64,6 @@ public class LongestBalancedSubstringAfterOneSwap {
 				}
 			}
 
-			// -------- Case 3: balance + 2 --------
 			if (map.containsKey(balance + 2)) {
 				for (int start : map.get(balance + 2)) {
 					int l = start + 1;
