@@ -31,5 +31,4 @@ public class LectureSleep {
 
 		System.out.println(initialSum + maxExtra);
 	}
-
 }
